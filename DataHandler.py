@@ -58,7 +58,7 @@ class DataHandler:
 			predir = 'content/TGT/Datasets/Taobao/'
 			behs = ['pv', 'fav', 'cart', 'buy']
 		elif args.data == 'ijcai':
-			predir = 'Content/TGT/Datasets/ijcai/'
+			predir = 'content/TGT/Datasets/ijcai/'
 			behs = ['click', 'fav', 'cart', 'buy']
 		elif args.data == 'jd':
 			predir = 'content/TGT/Datasets/JD2021/'
