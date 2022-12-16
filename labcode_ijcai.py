@@ -440,13 +440,13 @@ class Recommender:
 			pickle.dump(self.metrics, fs)
 
 		saver = tf.train.Saver()
-		saver.save(self.sess, 'Models/' + args.save_path)
+		saver.save(self.sess, '/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/' + args.save_path)
 		log('Model Saved: %s' % args.save_path)
 
 	def loadModel(self):
 		saver = tf.train.Saver()
-		saver.restore(sess, 'Models/' + args.load_model)
-		with open('History/' + args.load_model + '.his', 'rb') as fs:
+		saver.restore(sess, '/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/' + args.load_model)
+		with open('/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/' + args.load_model + '.his', 'rb') as fs:
 			self.metrics = pickle.load(fs)
 		log('Model Loaded')	
 
