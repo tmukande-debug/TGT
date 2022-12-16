@@ -436,17 +436,17 @@ class Recommender:
 	def saveHistory(self):
 		if args.epoch == 0:
 			return
-		with open('/content/TGT/History/' + args.save_path + '.his', 'wb') as fs:
+		with open('History/' + args.save_path + '.his', 'wb') as fs:
 			pickle.dump(self.metrics, fs)
 
 		saver = tf.train.Saver()
-		saver.save(self.sess, '/content/TGT/Models/' + args.save_path)
+		saver.save(self.sess, 'Models/' + args.save_path)
 		log('Model Saved: %s' % args.save_path)
 
 	def loadModel(self):
 		saver = tf.train.Saver()
-		saver.restore(sess, '/content/TGT/Models/' + args.load_model)
-		with open('/content/TGT/History/' + args.load_model + '.his', 'rb') as fs:
+		saver.restore(sess, 'Models/' + args.load_model)
+		with open('History/' + args.load_model + '.his', 'rb') as fs:
 			self.metrics = pickle.load(fs)
 		log('Model Loaded')	
 
