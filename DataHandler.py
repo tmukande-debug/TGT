@@ -55,10 +55,10 @@ def timeProcess(trnMats):
 class DataHandler:
 	def __init__(self):
 		if args.data == 'taobao':
-			predir = '/content/TGT/Datasets/Taobao/'
+			predir = '/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/taobao/'
 			behs = ['pv', 'fav', 'cart', 'buy']
 		elif args.data == 'ijcai':
-			predir = '/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/'
+			predir = '/content/drive/MyDrive/RESEARCH PROJECT/datasets/TGT/ijcai/'
 			behs = ['click', 'fav', 'cart', 'buy']
 		elif args.data == 'jd':
 			predir = '/content/TGT/Datasets/JD2021/'
